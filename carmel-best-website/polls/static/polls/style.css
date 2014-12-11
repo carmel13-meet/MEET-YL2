@@ -1,0 +1,21 @@
+#header {
+	text-align: center;
+}
+
+#hello_message {
+	color: blue;
+}
+
+#content {
+	text-align: center;
+	width: 40%;
+	margin: auto;
+
+	/* add a nice frame for your content */
+	border-radius: 5px;
+}
+
+#footer {
+	text-align: center;
+}
+

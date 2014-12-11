@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to my page!</title>
+	<script type="text/javascript">
+		var image1 = new Image()
+    	image1.src = "{% static 'polls/slide1.png' %}"
+    	var image2 = new Image()
+    	image2.src = "{% static 'polls/slide2.jpg' %}"
+		var image3 = new Image()
+		image3.src = "{% static 'polls/slide3.jpeg' %}"
+
+	</script>
+</head>
+<body background="{% static 'polls/bgimage.jpg' %}">
+	<!-- HEADER -->
+	<div id="header">
+		<h1 id="hello_message">Welcome to the amazing page of Carmel!</h1>
+	</div>
+
+	<!-- CONTENT -->
+	<div id="content">
+		<p>Hi!</p>
+		<p>My name is Carmel Paradis and I'm 16 from Tivon.</p>
+		<p>My hobbies are meeting with friends, playing the guitar or piano and playing basketball.</p>
+	</div>
+
+	<!-- FOOTER -->
+	<div id="footer">
+	</div>
+
+	<img src="{% static 'polls/slide1.png' %}" width="500" height="300" name="slide" />
+	<script type="text/javascript">
+        var step=1;
+        function slideit()
+        {
+            document.images.slide.src = eval("image"+step+".src");
+            if(step<3)
+                step++;
+            else
+                step=1;
+            setTimeout("slideit()",2500);
+        }
+        slideit();
+</script>
+
+<iframe width="0" height="0" src="//www.youtube.com/embed/hFvN3UlvKSs?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+<br />
+
+<iframe width="420" height="315" src="//www.youtube.com/embed/AMPawenjozg" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
